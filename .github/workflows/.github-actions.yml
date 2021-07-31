@@ -2,18 +2,18 @@ name: GitHub Actions
 on: [push]
 jobs:
   Test:
-    runs-on: Cesars-iMac-Pro
+    runs-on: flutter-runner-kintosh
     steps:
       - run: export PATH=$PATH:/Users/cesarurrego/Development/flutter/bin
       - run: flutter test
   Documentation:
-    runs-on: Cesars-iMac-Pro
+    runs-on: flutter-runner-kintosh
     steps:
       - run: export PATH=$PATH:/Users/cesarurrego/Development/flutter/bin
       - run: export PATH=$PATH:/Users/cesarurrego/.pub-cache/bin/
       - run: dartdoc
   android_build:
-    runs-on: Cesars-iMac-Pro
+    runs-on: flutter-runner-kintosh
     steps:
     - run: export PATH=$PATH:/Users/cesarurrego/Development/flutter/bin
     - run: export PATH=$PATH:/Users/cesarurrego/Library/Android/sdk//tools
