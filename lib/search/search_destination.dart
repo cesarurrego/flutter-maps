@@ -1,8 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:google_maps_flutter/google_maps_flutter.dart' show LatLng;
-import 'package:maps_app/bloc/current_location/current_location_bloc.dart';
-import 'package:maps_app/bloc/map/map_bloc.dart';
 import 'package:maps_app/models/search_response.dart';
 import 'package:maps_app/models/search_result.dart';
 import 'package:maps_app/services/traffic_service.dart';
