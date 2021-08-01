@@ -30,7 +30,7 @@ jobs:
         channel: 'stable' # or: 'beta', 'dev' or 'master'
     - run: dartdoc
 
-  build_android:
+  build_android_apk:
     runs-on: macos-latest
     needs: [test]
     #sequence of tasks called
@@ -45,12 +45,32 @@ jobs:
         channel: 'stable'
     - run: flutter pub get
     # - run: flutter build apk
-    - run: flutter build appbundle
     - name: Upload APK
       uses: actions/upload-artifact@main
       with:
         name: apk-build
-        path: build/app/outputs/apk/release
+        path: build/app/outputs/flutter-apk/app-release.apk
+
+  build_android_aab:
+    runs-on: macos-latest
+    needs: [test]
+    #sequence of tasks called
+    steps:
+    - uses: actions/checkout@v2
+    - uses: actions/setup-java@v1
+      with:
+        java-version: '12.x'
+    - uses: subosito/flutter-action@v1
+      with:
+        flutter-version: '2.2.3'
+        channel: 'stable'
+    - run: flutter pub get
+    - run: flutter build appbundle
+    - name: Upload AAB
+      uses: actions/upload-artifact@main
+      with:
+        name: aab-build
+        path: build/app/outputs/bundle/release/app-release.aab
 
   build_ios:
     runs-on: macos-latest
