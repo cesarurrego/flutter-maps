@@ -26,7 +26,7 @@ class TrafficService {
 
   final _baseUrlDir = 'https://api.mapbox.com/directions/v5';
   final _baseUrlGeo = 'https://api.mapbox.com/geocoding/v5';
-  final _apiKey = 'pk.eyJ1IjoiY2F1cnJlZ296IiwiYSI6ImNrcTZzb21iNTEzZDMyd29odGFvMTJwcHEifQ.bop-hsW7-7sqrMs2LS4hGA';
+  final _apiKey = 'ApiKey';
 
   void dispose() {
     this._suggestionStreamController.close();
