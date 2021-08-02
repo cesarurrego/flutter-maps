@@ -6,7 +6,6 @@ jobs:
     runs-on: macos-latest
     #sequence of tasks called
     steps:
-    - name: Install and set Flutter version
     - uses: actions/checkout@v2
     - uses: actions/setup-java@v1
       with:
