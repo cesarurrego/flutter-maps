@@ -6,7 +6,7 @@ void calculateAlert( BuildContext context ){
       context: context,
       builder: ( context ) => AlertDialog(
         title: Text('Wait please!'),
-        content: Text('Calculating Route'),
+        content: Text('Calculating Route. Wait!'),
       )
     );
   } else {
