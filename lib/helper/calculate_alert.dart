@@ -14,7 +14,7 @@ void calculateAlert( BuildContext context ){
       context: context, 
       builder: ( _ ) => CupertinoAlertDialog(
         title: Text('Wait please!'),
-        content: Text('Calculating Route. Wait please!'),
+        content: Text('Calculating Route. Wait'),
       )
     );
   }
